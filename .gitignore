@@ -109,4 +109,5 @@ dist
 #firebase files
 .firebase/
 .firebaserc
-.firebase.json
+firebase.json
+.public/

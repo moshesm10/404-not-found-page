@@ -1,0 +1,24 @@
+{
+  "name": "404-not-found-page",
+  "version": "1.0.0",
+  "description": "404-not-found-page",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshesm10/404-not-found-page.git"
+  },
+  "author": "moshesm10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moshesm10/404-not-found-page/issues"
+  },
+  "homepage": "https://github.com/moshesm10/404-not-found-page#readme",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}

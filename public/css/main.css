@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("../fonts/Inconsolata/Inconsolata Bold.eot");
+  src: url("../fonts/Inconsolata/Inconsolata Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inconsolata/Inconsolata Bold.woff2") format("woff2"), url("../fonts/Inconsolata/Inconsolata Bold.woff") format("woff"), url("../fonts/Inconsolata/Inconsolata Bold.svg#Inconsolata Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url("../fonts/Space Mono/Space Mono Bold.eot");
+  src: url("../fonts/Space Mono/Space Mono Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Space Mono/Space Mono Bold.woff2") format("woff2"), url("../fonts/Space Mono/Space Mono Bold.woff") format("woff"), url("../fonts/Space Mono/Space Mono Bold.svg#Space Mono Bold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url("../fonts/Space Mono/Space Mono.eot");
+  src: url("../fonts/Space Mono/Space Mono.eot?#iefix") format("embedded-opentype"), url("../fonts/Space Mono/Space Mono.woff2") format("woff2"), url("../fonts/Space Mono/Space Mono.woff") format("woff"), url("../fonts/Space Mono/Space Mono.svg#Space Mono") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .container .header__logo {
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-align: left;
+    text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .container .header__logo {
+        margin-top: 20px; } }
+    @media (min-width: 769px) {
+      .container .header__logo {
+        margin-top: 40px; } }
+  .container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .container .content__img {
+      height: auto; }
+    .container .content__description {
+      letter-spacing: -0.035em; }
+      .container .content__description-title {
+        font-family: 'Space Mono';
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 36px;
+        line-height: 1.5em; }
+      .container .content__description-subtitle {
+        font-family: 'Space Mono';
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 64px;
+        line-height: 1.5em; }
+      .container .content__description-button {
+        font-family: 'Space Mono';
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: #fff;
+        border: none;
+        padding: 24px 43px;
+        outline: none;
+        text-transform: uppercase;
+        background: #333333; }
+        .container .content__description-button:hover {
+          background: #cccccc;
+          color: black; }
+    @media (max-width: 768px) {
+      .container .content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .container .content__img {
+          margin: 50px auto 20px;
+          width: 100%; }
+        .container .content__description-title {
+          font-size: 2.8em; }
+        .container .content__description-subtitle {
+          width: 100%;
+          font-size: 1.1em; } }
+    @media (min-width: 769px) {
+      .container .content__img {
+        margin-right: 100px;
+        width: 40%; }
+      .container .content__description-title {
+        font-size: 4em; }
+      .container .content__description-subtitle {
+        width: 60%;
+        font-size: 1.5em; } }
+  .container .footer {
+    text-align: center; }
+    .container .footer__content {
+      font-family: 'Space Mono';
+      font-weight: 400;
+      font-style: normal;
+      margin: 30px auto;
+      font-size: 14px; }

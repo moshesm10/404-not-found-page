@@ -1,0 +1,199 @@
+// == fonts == 
+
+@font-face {
+    font-family:'Inconsolata';
+    src: url('../fonts/Inconsolata/Inconsolata Bold.eot');
+	src: url('../fonts/Inconsolata/Inconsolata Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Inconsolata/Inconsolata Bold.woff2') format('woff2'),
+		url('../fonts/Inconsolata/Inconsolata Bold.woff') format('woff'),
+		url('../fonts/Inconsolata/Inconsolata Bold.svg#Inconsolata Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Space Mono';
+    src: url('../fonts/Space Mono/Space Mono Bold.eot');
+	src: url('../fonts/Space Mono/Space Mono Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Space Mono/Space Mono Bold.woff2') format('woff2'),
+		url('../fonts/Space Mono/Space Mono Bold.woff') format('woff'),
+		url('../fonts/Space Mono/Space Mono Bold.svg#Space Mono Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'Space Mono';
+    src: url('../fonts/Space Mono/Space Mono.eot');
+	src: url('../fonts/Space Mono/Space Mono.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Space Mono/Space Mono.woff2') format('woff2'),
+		url('../fonts/Space Mono/Space Mono.woff') format('woff'),
+		url('../fonts/Space Mono/Space Mono.svg#Space Mono') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+// == mixins ==
+
+@mixin font-Inconsolata {
+    font-family:'Inconsolata';
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin font-Space-Mono-Bold {
+    font-family:'Space Mono';
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin font-Space-Mono-Regular {
+    font-family:'Space Mono';
+    font-weight: 400;
+    font-style: normal;
+}
+
+// == var == 
+
+$white: #fff;
+$gray-1: #333333;
+
+// == common == 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+        &__logo {
+            @include font-Inconsolata;
+
+            font-size: 24px;
+            line-height: 25px;
+            letter-spacing: -0.08em;
+            text-align: left;
+            text-transform: uppercase;
+            
+            @media (max-width: 768px) {
+                margin-top: 20px;
+            }
+            @media (min-width: 769px) {
+                margin-top: 40px;
+            }
+        }  
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            height: auto;
+        }
+
+        &__description {
+            letter-spacing: -0.035em;
+
+            &-title {
+                @include font-Space-Mono-Bold;
+
+                margin-bottom: 36px;
+                line-height: 1.5em;
+            }
+
+            &-subtitle {
+                @include font-Space-Mono-Regular;
+
+                margin-bottom: 64px;
+                line-height: 1.5em;
+            }
+
+            &-button {
+                @include font-Space-Mono-Bold;
+                
+                font-size: 14px;
+                line-height: 21px;
+                color: $white;
+                border: none;
+                padding: 24px 43px;
+                outline: none;
+                text-transform: uppercase;
+                background: $gray-1;
+
+                &:hover {
+                    background: invert($gray-1);
+                    color: invert($white);
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            
+            &__img {
+                margin: 50px auto 20px;
+                width: 100%;
+            }
+
+            &__description {
+
+                &-title {
+                    font-size: 2.8em;
+                }
+
+                &-subtitle {
+                    width: 100%;
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        @media (min-width: 769px) {
+            
+            &__img {
+                margin-right: 100px;
+                width: 40%;
+            }
+
+            &__description {
+
+                &-title {
+                    font-size: 4em;
+                }
+
+                &-subtitle {
+                    width: 60%;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    .footer {
+        text-align: center;
+
+        &__content {
+            @include font-Space-Mono-Regular;
+            
+            margin: 30px auto;
+            font-size: 14px;
+        }
+    }
+}
